@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <script>
+      class Car {
+        constructor(
+          nameCar,
+          colorCar,
+          maxSpeed,
+          currentSpeed,
+          typeCar,
+          brandCar,
+          numberSeat,
+          lifeCar,
+          priceCar
+        ) {
+          this.nameCar = nameCar;
+          this.colorCar = colorCar;
+          this.maxSpeed = maxSpeed;
+          this.currentSpeed = currentSpeed;
+          this.typeCar = typeCar;
+          this.brandCar = brandCar;
+          this.numberSeat = numberSeat;
+          this.lifeCar = lifeCar;
+          this.priceCar = priceCar;
+        }
+
+        start() {
+          return `Name of car: ${this.nameCar}`;
+        }
+
+        onGas() {
+          return `Current speed: ${this.currentSpeed}`;
+        }
+
+        brakes() {
+          //code here
+        }
+
+        shutdown() {
+          //code here
+        }
+      }
+
+     class BMW extends Car {
+        constructor( nameCar, colorCar, maxSpeed, currentSpeed, typeCar, brandCar, numberSeat, lifeCar, priceCar, id) {
+          super(nameCar, colorCar, maxSpeed, currentSpeed, typeCar, brandCar, numberSeat, lifeCar, priceCar);
+          this.id = id;
+     }
+
+          toString(){
+               return (`${super.toString()},Car name: ${this.nameCar}`);
+          }
+     }
+     let vinFast = new BMW ("LUX SA 2.0", "white", 120, 100, 'A', 'Vinfast', '4', 2021, 1000000000, 1);
+
+
+     console.log(vinFast);
+     console.log(vinFast.onGas());
+     console.log(vinFast.start());
+    </script>
+  </body>
+</html>
